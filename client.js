@@ -8,7 +8,11 @@ const connect = function() {
 
   conn.on('data', function(data) {
     console.log(data.toString());
-    client.end();
+    conn.end();
+  });
+
+  conn.on('connect', function() {
+    console.log('Successfully connected to game server');
   });
   
   // interpret incoming data as text
