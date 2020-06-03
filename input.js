@@ -1,5 +1,8 @@
+let connection;
 
-const setupInput = function() {
+const setupInput = function(conn) {
+  connection = conn;
+
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding('utf8');
@@ -11,23 +14,40 @@ const setupInput = function() {
 }
 
 const handleUserInput = function (key) {
+  console.log(key)
   if (key === '\u0003') {
     process.exit();
   } 
   if (key === 'w') {
-    conn.write("Move: up");
+  connection.write("Move: up");
   }
 
   if (key === 'd') {
-    conn.write("Move: right");
+  connection.write("Move: right");
+  connection.write("Move: right");
+  connection.write("Move: right");
+  connection.write("Move: right");
   } 
 
   if (key === 's') {
-    conn.write("Move: down");
+  connection.write("Move: down");
+  connection.write("Move: down");
   }
 
   if (key === 'a') {
-    conn.write("Move: left")
+   connection.write("Move: left")
+  }
+
+  if (key === '56') {
+    conn.write ("Say: Ayyyyye")
+  }
+
+  if(key === '44') {
+    conn.write ("Say: This is grooooovy!")
+  }
+
+  if(key === '22') {
+    conn.write ("Say: I Byte Back!")
   }
 }
 
