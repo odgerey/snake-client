@@ -21,8 +21,8 @@ const connect = function() {
 
   conn.on('connect', function () {
     conn.write("Name: AMT");
-    conn.write("Move: up");
-    setInterval(() => conn.write('Move: right'), 500);
+    //conn.write("Move: up");
+    //setInterval(() => conn.write('Move: right'), 500);
 
   });
 
