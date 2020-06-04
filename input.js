@@ -24,13 +24,9 @@ const handleUserInput = function (key) {
 
   if (key === 'd') {
   connection.write("Move: right");
-  connection.write("Move: right");
-  connection.write("Move: right");
-  connection.write("Move: right");
   } 
 
   if (key === 's') {
-  connection.write("Move: down");
   connection.write("Move: down");
   }
 
@@ -38,16 +34,16 @@ const handleUserInput = function (key) {
    connection.write("Move: left")
   }
 
-  if (key === '56') {
-    conn.write ("Say: Ayyyyye")
+  if (key === '5') {
+    connection.write ("Say: Ayyyyyyyyyye")
   }
 
-  if(key === '44') {
-    conn.write ("Say: This is grooooovy!")
+  if(key === '4') {
+    connection.write ("Say: This is groooovy")
   }
 
-  if(key === '22') {
-    conn.write ("Say: I Byte Back!")
+  if(key === '2') {
+    connection.write ("Say: 1 6yt3 64CK!")
   }
 }
 
